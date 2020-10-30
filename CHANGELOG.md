@@ -1,8 +1,12 @@
 # Changelog
 
+## v3
+
+* Address issues with output file (cannot get to work with core testbox)
+
 ## v2
 
-* Upgrae to latest box lite image
+* Upgrade to latest box lite image
 
 ## v1
 

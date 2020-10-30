@@ -4,7 +4,6 @@ BOXJSON_DIR=${INPUT_BOXJSON_DIR:-""}
 TEST_DIR=${INPUT_TEST_DIR:-"/tests"}
 TEST_SERVER_JSON=${INPUT_TEST_SERVER_JSON:-"$TEST_DIR/server.json"}
 OUTPUT_FILE=${INPUT_OUTPUT_FILE:-""}
-OUTPUT_FORMAT=${INPUT_OUTPUT_FORMAT:-""}
 VERBOSE=${INPUT_VERBOSE:-"false"}
 FULL_DIR="${GITHUB_WORKSPACE}${BOXJSON_DIR}"
 BOX_JSON_FILE="${FULL_DIR}/box.json"
@@ -29,4 +28,8 @@ box start directory="${GITHUB_WORKSPACE}${TEST_DIR}" serverConfigFile="${GITHUB_
 
 echo "Running tests"
 cd $FULL_DIR
-box testbox run verbose=$VERBOSE outputfile="${GITHUB_WORKSPACE}${OUTPUT_FILE}" outputformats=$OUTPUT_FORMAT || exit 1
+exitcode=0
+box testbox run verbose=$VERBOSE > ${GITHUB_WORKSPACE}${OUTPUT_FILE} || exitcode=1
+echo ${GITHUB_WORKSPACE}${OUTPUT_FILE}
+
+exit $exitcode
