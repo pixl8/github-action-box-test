@@ -9,7 +9,7 @@ This GitHub Action runs a Commandbox + Testbox based test suite for your project
 
 steps:
   - name: Run tests
-    uses: pixl8/github-action-box-test@v2
+    uses: pixl8/github-action-box-test@v3
     with:
       boxjson_dir: /subdir
       test_dir: /tests
