@@ -1,0 +1,22 @@
+name: box-install
+description: This is an action to run box install to install dependencies
+author: Pixl8 Group
+branding:
+  icon: 'download-cloud'
+  color: 'green'
+inputs:
+  boxjson_dir:
+    description: Directory, relative to the root of your project, where the box.json file lives. Defaults to the root and must start with forward slash (/).
+    required: false
+  production:
+    description: Whether or not to set the production flag (default is false).
+    required: false
+  verbose:
+    description: Whether or not to set the verbose flag for debugging output (default is false).
+    required: false
+  force:
+    description: Whether or not to set the force flag (default is false)
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
