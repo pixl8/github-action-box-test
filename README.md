@@ -1,4 +1,4 @@
-# Github action: Box install
+# Github action: Box Test
 
 This GitHub Action runs a Commandbox + Testbox based test suite for your project.
 
@@ -13,10 +13,10 @@ steps:
     with:
       boxjson_dir: /subdir
       test_dir: /tests
-	  test_server_json: /tests/server.json
-	  output_file: /tests/test-results.xml
-	  output_format: junit
-	  verbose: false
+      test_server_json: /tests/server.json
+      output_file: /tests/test-results.xml
+      output_format: junit
+      verbose: false
 ```
 
 ## Inputs
