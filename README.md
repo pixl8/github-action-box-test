@@ -5,8 +5,6 @@ This GitHub Action runs a Commandbox + Testbox based test suite for your project
 ## Usage in Github actions workflow
 
 ```yml
-# .github/workflows/ci.yml
-
 steps:
   - name: Run tests
     uses: pixl8/github-action-box-test@v3
@@ -14,8 +12,7 @@ steps:
       boxjson_dir: /subdir
       test_dir: /tests
       test_server_json: /tests/server.json
-      output_file: /tests/test-results.xml
-      output_format: junit
+      output_file: /tests/test-results.txt
       verbose: false
 ```
 
@@ -38,10 +35,6 @@ Root directory of your tests. We will start a box server from here. Default is `
 
 A file path with which to output results.
 
-
-### `output_format`
-
-Output format of results for the output file. Available formats are: json,xml,junit,antjunit,simple,dot,doc,min,mintext,doc,text,tap,codexwiki
 
 ### `verbose`
 
