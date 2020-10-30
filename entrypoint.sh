@@ -30,6 +30,6 @@ echo "Running tests"
 cd $FULL_DIR
 exitcode=0
 box testbox run verbose=$VERBOSE > ${GITHUB_WORKSPACE}${OUTPUT_FILE} || exitcode=1
-echo ${GITHUB_WORKSPACE}${OUTPUT_FILE}
+cat ${GITHUB_WORKSPACE}${OUTPUT_FILE}
 
 exit $exitcode
