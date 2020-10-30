@@ -1,5 +1,9 @@
 # Changelog
 
+## v2
+
+* Upgrae to latest box lite image
+
 ## v1
 
 Initial commit with features:
