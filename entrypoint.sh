@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 BOXJSON_DIR=${INPUT_BOXJSON_DIR:-""}
 TEST_DIR=${INPUT_TEST_DIR:-"/tests"}
